@@ -1,6 +1,9 @@
 import React from 'react'
+import { useSelector } from 'react-redux'
+// import { selectCount } from './utils/counterSlice'
 
-const Header = ({count}) => {
+const Header = () => {
+    const count = useSelector((store)=> store.counter.count)
     return (
         <div className='header'>
             <ul>
